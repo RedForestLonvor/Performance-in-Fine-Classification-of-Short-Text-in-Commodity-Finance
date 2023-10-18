@@ -144,23 +144,23 @@
 
 | 模型名称                               | 最高Emotion成绩 |
 | -------------------------------------- | --------------- |
-| TextClassificationModel_CNN_MHA        | 0.8297          |
-| TextClassificationModel_BiLSTM_CNN_MHA | 0.8233          |
-| TextClassificationModel_BiGRU          | 0.8396          |
-| TextClassificationModel_BiLSTM_MHA     | 0.8219          |
-| TextClassificationModel_GRU_MHA        | 0.8233          |
-| TextClassificationModel_BiGRU_MHA      | 0.819           |
+| TextClassificationModel_CNN_MHA        | 0.8197          |
+| TextClassificationModel_BiLSTM_CNN_MHA | 0.7793          |
+| TextClassificationModel_BiGRU          | 0.8495          |
+| TextClassificationModel_BiLSTM_MHA     | 0.8495          |
+| TextClassificationModel_GRU_MHA        | 0.8602          |
+| TextClassificationModel_BiGRU_MHA      | 0.8510          |
 
 ### 3.2最高Feature准确率
 
 | 模型名称                               | 最高Feature成绩 |
 | -------------------------------------- | --------------- |
-| TextClassificationModel_CNN_MHA        | 0.5564          |
-| TextClassificationModel_BiLSTM_CNN_MHA | 0.726           |
-| TextClassificationModel_BiGRU          | 0.7991          |
-| TextClassificationModel_BiLSTM_MHA     | 0.7402          |
-| TextClassificationModel_GRU_MHA        | 0.6962          |
-| TextClassificationModel_BiGRU_MHA      | 0.9759          |
+| TextClassificationModel_CNN_MHA        | 0.5202          |
+| TextClassificationModel_BiLSTM_CNN_MHA | 0.7892          |
+| TextClassificationModel_BiGRU          | 0.8616          |
+| TextClassificationModel_BiLSTM_MHA     | 0.9595          |
+| TextClassificationModel_GRU_MHA        | 0.9865          |
+| TextClassificationModel_BiGRU_MHA      | 0.9929          |
 
 ### 3.3训练情况
 

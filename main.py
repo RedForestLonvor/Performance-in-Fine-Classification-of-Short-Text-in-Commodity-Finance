@@ -139,7 +139,7 @@ def main():
         optimizer = optim.Adam(model.parameters(), lr=0.0002)
         criterion = torch.nn.CrossEntropyLoss()
 
-        num_epochs = 50
+        num_epochs = 100
         best_test_loss = float('inf')
 
         for epoch in range(num_epochs):
@@ -159,54 +159,6 @@ def main():
                         file.write(
                             f"Text: {text}, True Feature: {true_feature}, True Emotion: {true_emotion}, Predicted Feature: {pred_feature}, Predicted Emotion: {pred_emotion}")
 
-# def predict(text, model, tokenizer, vocab, feature_vocab, device):
-#     # 将模型设置为评估模式
-#     model.eval()
-#
-#     # 对输入文本进行分词
-#     tokens = tokenizer(text)
-#
-#     # 将分词结果转换为词汇表索引
-#     token_indices = [vocab[token] for token in tokens if token in vocab]
-#
-#     # 将输入转换为PyTorch张量
-#     input_tensor = torch.tensor(token_indices, dtype=torch.long).unsqueeze(0).to(device)
-#
-#     # 对于预测，我们不需要提供特征标签，因此我们可以提供一个全零向量
-#     feature_label = torch.zeros(1, input_tensor.size(1), dtype=torch.long).to(device)
-#
-#     # 使用模型进行预测
-#     with torch.no_grad():
-#         emotion_logits, feature_logits = model(input_tensor, feature_label)
-#
-#     # 获取最大概率对应的索引
-#     emotion_prediction = torch.argmax(emotion_logits, dim=1).item()
-#     feature_prediction = torch.argmax(feature_logits, dim=1).item()
-#
-#     # 将预测的索引转换为实际情感和特征标签
-#     emotion_label = 'positive' if emotion_prediction == 1 else 'negative'
-#     feature_label = [key for key, value in feature_vocab.items() if value == feature_prediction][0]
-#
-#     return emotion_label, feature_label
-#
-# def solve():
-#     embedding_file = 'sgns.weibo.bigram-char'
-#     tokenizer = get_tokenizer()
-#
-#     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-#     print(f"Using device: {device}")
-#
-#     # 加载模型
-#     model_path = "path/to/saved/model.pt"
-#     model = torch.load(model_path)
-#     model.to(device)
-#     # 示例文本
-#     text = "您要预测的文本"
-#     # 预测情感和特征
-#     emotion, feature = predict(model, text, tokenizer, vocab, feature_vocab)
-#     print(f"预测的情感：{emotion}")
-#     print(f"预测的特征：{feature}")
 
 if __name__ == '__main__':
     main()
-    # solve()
